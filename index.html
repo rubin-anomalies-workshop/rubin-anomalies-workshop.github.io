@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Time-Domain Needles 2024</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload" style="overflow: hidden;  margin: 0; padding: 0;">
+
+		<!-- Wrapper -->
+		<div class="transient"></div>
+
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+					 <span class="logo"><img src="images/RubinLogo.png" style="position: relative; max-height:200px; z-index: 1000;" alt="Rubin Observatory" /></span>
+						<h1>Time-Domain Needles in Rubin's Haystack</h1>
+						<span>Harvard Center for Astrophysics, Cambridge, MA | April 17-19, 2024</span>
+					</header>
+
+				<!-- Main -->
+					<div id="main"  style="background-color: rgba(255, 255, 255, 0.0);">
+
+						<!-- Circle container -->
+						<div id="circle-container" style='position:relative;'></div>
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div style="margin-bottom: 0; margin-top: 0;" class="spotlight">
+									<div class="content">
+									<ul class="actions" style="justify-content: center;">
+											<li><a href="pages/about.html" style="display: inline-block;" class="button" id="aboutButton" onmouseover="hoverButton('aboutButton', 'About<br><br>Details about the workshop, its motivation, the SOC/LOC members, and more.')" onmouseout="unhoverButton('aboutButton', 'About')">About</a></li>
+									  	<li><a href="pages/registration.html" style="display: inline-block;" class="button" id="registrationButton" onmouseover="hoverButton('registrationButton', 'Registration<br><br>Register, submit an idea for a hack, and apply for travel support.')" onmouseout="unhoverButton('registrationButton', 'Registration')">Registration</a></li>
+											<li><a href="pages/program.html" style="display: inline-block;" class="button" id="programButton" onmouseover="hoverButton('programButton', 'Program<br><br>The list of invited talks and hacks (will be updated as the workshop approaches).')" onmouseout="unhoverButton('programButton', 'Program')">Program</a></li>
+											<li><a href="pages/practicalinfo.html" style="display: inline-block;" class="button" id="practicalButton" onmouseover="hoverButton('practicalButton', 'Getting Around<br><br>Accommodation, transportation, and food in Cambridge/Boston.')" onmouseout="unhoverButton('practicalButton', 'Getting Around')">Getting Around</a></li>
+										</ul>
+									</div>
+								</div>
+							</section>
+			</div>
+
+			<script>
+			function hoverButton(buttonId, newContent) {
+			  var button = document.getElementById(buttonId);
+			  button.innerHTML = newContent;
+			  button.style.backgroundColor = 'rgba(222, 222, 222, 0.25)';
+			  button.style.height = '170px'; /* Height after hover */
+			  button.style.width = '240px'; /* Width after hover */
+			  button.style.whiteSpace = 'normal';
+			  button.style.transition = 'background-color 0.5s ease, height 0.5s ease, width 0.5s ease, white-space 0.5s ease';
+			}
+
+		function unhoverButton(buttonId, originalContent) {
+		  var button = document.getElementById(buttonId);
+		  button.innerHTML = originalContent;
+			button.style.height = ''; // Reset the height
+		  button.style.width = ''; // Reset the width
+			button.style.backgroundColor = '';
+		}
+
+		var transientCounter = 0; // Global counter for transients
+		var asteroidCounter = 0; // Global counter for asteroids
+
+		function createTransient() {
+			// Increment the global counter each time a transient is created
+		  transientCounter++;
+
+			var specificColor = 'rgb(255, 0, 0)'; // Example: Red for every 500th firework
+		  var defaultColor = 'rgb(255, 255, 255)'; // Default color for other fireworks
+
+			//make every 50th transient red -- the anomaly!
+		  var transientColor = (transientCounter % 50 === 0) ? specificColor : defaultColor;
+
+		  var sn = document.createElement('div');
+		  sn.className = 'transient';
+
+		  sn.style.top = Math.random() * 100 + '%';
+		  sn.style.left = Math.random() * 100 + '%';
+
+		  var beforeRotation = Math.floor(Math.random() * 360) + 'deg';
+		  var afterRotation = Math.floor(Math.random() * 360) + 'deg';
+
+		  sn.style.setProperty('--before-rotation', beforeRotation);
+		  sn.style.setProperty('--after-rotation', afterRotation);
+
+		  var gradients = [];
+
+		  for (var j = 0; j < 20; j++) {
+		    var gradientX = Math.floor(Math.random() * 100) + '%';
+		    var gradientY = Math.floor(Math.random() * 100) + '%';
+		    var gradientSize = (Math.random() * 0.1).toFixed(2) + 'vmin';
+				console.log(gradientSize)
+		    gradients.push(`radial-gradient(circle, ${transientColor} ${gradientSize}, transparent) ${gradientX} ${gradientY}`);
+		  }
+
+		  sn.style.setProperty('--gradients', gradients.join(', '));
+
+			var finalWidth = Math.floor(Math.random() * 3)+20 + 'vmin'; // Range from 20vmin to 45vmin
+
+		  document.body.appendChild(sn);
+
+		  var animationName = `transientAnimation${Date.now()}`;
+
+			// Adjusted keyframes for expansion only, without opacity changes
+			var keyframes = `
+			  @keyframes ${animationName} {
+			    0% {
+			      width: 0.5vmin;
+			    }
+			    100% {
+			      width: ${finalWidth};
+			    }
+			  }
+			`;
+
+
+		  var style = document.createElement('style');
+		  style.innerHTML = keyframes;
+		  document.head.appendChild(style);
+
+			var duration = parseFloat((Math.random() * 30).toFixed(2)) + 10; // Ensure this is a number
+
+			// Apply the animation to your element
+			sn.style.animation = `${animationName} ${duration}s forwards`;
+
+			// Listen for the end of the expansion animation
+			sn.addEventListener('animationend', function() {
+			  // Initiate fade-out using a CSS transition
+			  sn.style.transition = 'opacity 2s'; // Adjust the duration as needed
+			  sn.style.opacity = '0';
+
+			  // Set a timeout to remove the element after the fade-out transition is complete
+			  setTimeout(function() {
+			    sn.remove();
+			    style.remove(); // Clean up the dynamically added style as well
+			  }, 2000); // Match this delay to the duration of the opacity transition
+			});
+		}
+
+		function launchTransient() {
+			if (!document.hidden) {
+				createTransient();
+			}
+		  var delay = Math.random() * 5000 + 1000;
+		  setTimeout(launchTransient, delay);
+		}
+
+		launchTransient();
+
+		function createAsteroid() {
+			var container = document.getElementById('circle-container');
+		  var asteroid = document.createElement('div');
+			var size = Math.random()*10;
+		  asteroid.classList.add('asteroid');
+
+			// Increment the global counter each time an asteroid is created
+			asteroidCounter++;
+
+		  // Set a distinct background color for visibility
+			asteroid.style.position = 'absolute';
+			asteroid.style.opacity = Math.random();
+		  asteroid.style.width = size+'px'; // Set initial width
+			// Default color for asteroids
+			var defaultColor = 'rgb(255, 255, 255)'; // Example: Gray color
+
+			// Specific color for every 50th asteroid
+			if (asteroidCounter % 20 === 0) {
+				asteroid.style.backgroundColor = 'rgb(255, 0, 0)'; // Set every 20th asteroid to red
+			} else {
+				asteroid.style.backgroundColor = defaultColor; // Set default color for other asteroids
+			}
+		  asteroid.style.height = size+'px'; // Set initial height
+			asteroid.style.zIndex = 1;
+		  asteroid.style.borderRadius = '50%'; // Make it round
+
+		  // Set a random starting position within the viewport bounds
+		  //asteroid.style.left = Math.random() * (container.offsetWidth - 20) + 'px'; // Adjust 20 to match circle size
+		  //asteroid.style.top = Math.random() * (container.offsetHeight - 20) + 'px'; // Adjust 20 to match circle size
+
+		  // Randomize velocity
+		  //var velocityX = (Math.random() - 0.5) * 30; // Horizontal velocity
+		  //var velocityY = (Math.random() - 0.5) * 30; // Vertical velocity
+
+			// Randomly decide the starting side (0: top, 1: right, 2: bottom, 3: left)
+		  var side = Math.floor(Math.random() * 4);
+			// Use the viewport dimensions to ensure the asteroid starts off-screen
+		  var viewportWidth = window.innerWidth;
+		  var viewportHeight = window.innerHeight;
+
+		  switch(side) {
+		    case 0: // Top
+		      asteroid.style.top = -size + 'px'; // Start above the screen
+		      asteroid.style.left = Math.random() * viewportWidth+ 'px';
+		      break;
+		    case 1: // Right
+		      asteroid.style.left = viewportWidth + 'px'; // Start to the right of the screen
+		      asteroid.style.top = Math.random() * viewportHeight + 'px';
+		      break;
+		    case 2: // Bottom
+		      asteroid.style.top = viewportHeight + 'px'; // Start below the screen
+		      asteroid.style.left = Math.random() * viewportWidth + 'px';
+		      break;
+		    case 3: // Left
+		      asteroid.style.left = -size + 'px'; // Start to the left of the screen
+		      asteroid.style.top = Math.random() * viewportHeight + 'px';
+		      break;
+		  }
+
+			asteroid.style.transition = 'opacity 0.5s ease-out';
+
+		  // Set velocities to ensure they move on-screen
+		  var velocityX = (Math.random() - 0.5) * 30; // Adjust velocity as needed
+		  var velocityY = (Math.random() - 0.5) * 30; // Adjust velocity as needed
+
+		  // Make sure the asteroid moves on-screen
+		  if(side === 0) velocityY = Math.abs(velocityY); // Downward if starting from top
+		  if(side === 1) velocityX = -Math.abs(velocityX); // Leftward if starting from right
+		  if(side === 2) velocityY = -Math.abs(velocityY); // Upward if starting from bottom
+		  if(side === 3) velocityX = Math.abs(velocityX); // Rightward if starting from left
+
+		  // Add the asteroid to the container and apply initial styles
+		  document.body.appendChild(asteroid);
+
+		  // Move the circle at fixed intervals
+		  var intervalId = setInterval(function() {
+			    var currentLeft = parseFloat(asteroid.style.left);
+			    var currentTop = parseFloat(asteroid.style.top);
+
+			    // Update position
+			    var newLeft = currentLeft + velocityX;
+			    var newTop = currentTop + velocityY;
+
+			    asteroid.style.left = newLeft + 'px';
+			    asteroid.style.top = newTop + 'px';
+		  }, 50); // Move every 50 milliseconds
+
+			setTimeout(function() {
+			  asteroid.style.opacity = 0; // Start fade-out
+			  // Wait for the fade-out transition to complete before removing the asteroid
+			  setTimeout(function() {
+			    asteroid.remove(); // Remove the asteroid from the DOM
+			  }, 500); // This delay should match the duration of the CSS opacity transition
+			}, 5000); // Time before starting the fade-out
+
+		};
+
+		// Create a new asteroid every 0.5s
+		if (!document.hidden) {
+	    setInterval(createAsteroid, Math.random() * 500); // Adjust interval as needed
+	  }
+		</script>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+
+</html>
