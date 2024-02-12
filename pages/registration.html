@@ -44,46 +44,69 @@
 									<div class="content">
 										<header class="major">
 											<h2>Registration Form</h2>
+												<em>Please note that the goal of this workshop is to begin designing and implementing approaches for time-domain anomaly detection.
+													We expect all registrants to participate fully in achieving this goal.</em>
 										</header>
 									</div>
 								</div>
 								<form method="post" action="#">
 									<div class="row gtr-uniform">
-										<div class="col-6 col-12-xsmall">
-											<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+										<div class="col-12">
+											<input type="checkbox" id="email-copy" name="email-copy">
+											<label for="email-copy">Email me a copy of my answers.</label>
 										</div>
 										<div class="col-6 col-12-xsmall">
-											<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+											<input type="text" name="name" id="name" value="" placeholder="Name" />
 										</div>
 										<div class="col-6 col-12-xsmall">
-											<input type="text" name="demo-institution" id="demo-institution" value="" placeholder="Institution" />
+											<input type="email" name="email" id="email" value="" placeholder="Email" />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<input type="text" name="affiliation" id="affiliation" value="" placeholder="Affiliation(s)" />
 										</div>
 										<div class="col-12">
 											<select name="demo-category" id="demo-category">
 												<option value="">- Career Stage -</option>
 												<option value="1">Undergraduate</option>
 												<option value="2">Graduate</option>
-												<option value="3">Postdoctoral</option>
+												<option value="3">Postdoctorate</option>
 												<option value="4">Faculty</option>
 												<option value="5">Industry Professional</option>
 												<option value="6">Other</option>
 											</select>
 										</div>
-										<div class="col-6 col-12-small">
-											<input type="checkbox" id="demo-copy" name="demo-copy">
-											<label for="demo-copy">Email me a copy</label>
+										<div class="col-12">
+											Please provide a brief overview of your research or industry focus.
+											<textarea name="expertise-summary" id="expertise-summary" placeholder="Enter your background below." rows="3"></textarea>
 										</div>
 										<div class="col-12">
-											Please describe your interest in Rubin Observatory and/or anomaly detection below. Please limit your response to a few sentences.
-											<textarea name="demo-message" id="demo-message" placeholder="Enter your interest below." rows="6"></textarea>
+											Please describe your interest and expertise in Rubin Observatory and/or anomaly detection below. Limit your response to a few sentences.
+											<textarea name="interest-summary" id="interest-summary" placeholder="Enter your interest below." rows="6"></textarea>
 										</div>
 										<div class="col-12">
-											Do you have a science case that you would like to hack on during this workshop? If so, describe it below.
-											<textarea name="demo-message" id="demo-message" placeholder="Enter your idea here." rows="6"></textarea>
+											Would you be willing to lead a ~1 hour breakout discussion during the workshop? If so, on what?
+											<textarea name="sciencecase-summary" id="sciencecase-summary" placeholder="Enter your idea here." rows="6"></textarea>
+										</div>
+										<div class="col-12">
+											Do you have a science case that you would like to hack on during this workshop? If so, describe it below. Please also mention any relevant (public) data you have that could be used for testing your approach.
+											<textarea name="sciencecase-summary" id="sciencecase-summary" placeholder="Enter your idea here." rows="6"></textarea>
+										</div>
+										<div class="col-12">
+											Do you have any dietary restrictions?
+											<textarea name="dietary" id="dietary" placeholder="Enter your question/comment here." rows="3"></textarea>
+										</div>
+										<div class="col-12">
+											Do you have any comments or questions for the organizers?
+											<textarea name="comments" id="comments" placeholder="Enter your question/comment here." rows="3"></textarea>
+										</div>
+										<div class="col-12">
+											A number of small travel grants will be awarded to allow early-career researchers to attend the hackathon. Please check the box below if you would like to be considered for support.</br>
+											<input type="checkbox" id="support" name="support">
+											<label for="support">Yes, I would like to apply for a travel grant.</label>
 										</div>
 										<div class="col-12">
 											<ul class="actions">
-												<li><input type="submit" value="Send Message" class="primary" /></li>
+												<li><input type="submit" value="Submit Registration" class="primary" /></li>
 												<li><input type="reset" value="Reset" /></li>
 											</ul>
 										</div>
