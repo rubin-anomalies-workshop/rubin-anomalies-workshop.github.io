@@ -52,19 +52,19 @@
 								<form method="post" action="https://script.google.com/macros/s/AKfycbzug_VxmvofoRnN17OPcLCq99b8zuuyZN4MpVbLEY3xRHaNObdq_JT2cuWXTKiNOHd2/exec">
 									<div class="row gtr-uniform">
 										<div class="col-6 col-12-xsmall">
-											<input type="text" name="firstname" id="firstname" value="" placeholder="First Name" />
+											<input type="text" name="firstname" id="firstname" value="" placeholder="First Name"  required/>
 										</div>
 										<div class="col-6 col-12-xsmall">
-											<input type="text" name="lastname" id="lastname" value="" placeholder="Last Name" />
+											<input type="text" name="lastname" id="lastname" value="" placeholder="Last Name"  required/>
 										</div>
 										<div class="col-6 col-12-xsmall">
-											<input type="email" name="email" id="email" value="" placeholder="Email" />
+											<input type="email" name="email" id="email" value="" placeholder="Email"  required/>
 										</div>
 										<div class="col-6 col-12-xsmall">
-											<input type="text" name="affiliation" id="affiliation" value="" placeholder="Affiliation(s)" />
+											<input type="text" name="affiliation" id="affiliation" value="" placeholder="Affiliation(s)"  required/>
 										</div>
 										<div class="col-12">
-											<select name="careerstage" id="careerstage">
+											<select name="careerstage" id="careerstage"  required>
 												<option value="">- Career Stage -</option>
 												<option value="Undergraduate">Undergraduate</option>
 												<option value="Graduate">Graduate</option>
@@ -76,11 +76,11 @@
 										</div>
 										<div class="col-12">
 											Please provide a brief overview of your research or industry focus.
-											<textarea name="expertise-summary" id="expertise-summary" placeholder="Enter your background below." rows="3"></textarea>
+											<textarea name="expertise-summary" id="expertise-summary" placeholder="Enter your background below." rows="3"  required></textarea>
 										</div>
 										<div class="col-12">
 											Please elaborate on your interest and expertise in Rubin Observatory and/or anomaly detection below. Limit your response to a few sentences.
-											<textarea name="interest-summary" id="interest-summary" placeholder="Enter your interest below." rows="6"></textarea>
+											<textarea name="interest-summary" id="interest-summary" placeholder="Enter your interest below." rows="6"  required></textarea>
 										</div>
 										<div class="col-12">
 											Would you be willing to lead a ~1 hour breakout discussion during the workshop? If so, on what?
@@ -92,7 +92,7 @@
 										</div>
 										<div class="col-12">
 											Do you have any dietary restrictions?
-											<textarea name="dietary" id="dietary" placeholder="Enter your question/comment here." rows="3"></textarea>
+											<textarea name="dietary" id="dietary" placeholder="Enter your question/comment here." rows="3"  required></textarea>
 										</div>
 										<div class="col-12">
 											Do you have any comments or questions for the organizers?
