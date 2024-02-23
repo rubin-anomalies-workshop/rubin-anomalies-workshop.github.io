@@ -2776,10 +2776,6 @@ input, select, textarea {
 		border-color: rgba(255, 255, 255, 0.35);
 	}
 
-		table tbody tr:nth-child(2n + 1) {
-			background-color: rgba(255, 255, 255, 0.075);
-		}
-
 	table th {
 		color: #ffffff;
 	}
