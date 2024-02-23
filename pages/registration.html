@@ -48,7 +48,7 @@
 										</header>
 									</div>
 								</div>
-								<form method="post" action="https://script.google.com/macros/s/AKfycbzZWHC4djt9efZ0PBdWQfhFAg4slVQ-WFohTdQ3TQe0iKdVtSsCryWIMzgMSHL7zbVS/exec">
+								<form method="post" action="https://script.google.com/macros/s/AKfycbzuM94OSa0mxjX68Y-10ezHkT2kwhM7M28zbFfGlJ8TdBcgWLj-714ai7YS5Wm0n7rh/exec">
 									<div class="row gtr-uniform">
 										<div class="col-6 col-12-xsmall">
 											<input type="text" name="firstname" id="firstname" value="" placeholder="First Name"  required/>
@@ -62,6 +62,9 @@
 										<div class="col-6 col-12-xsmall">
 											<input type="text" name="affiliation" id="affiliation" value="" placeholder="Affiliation(s)"  required/>
 										</div>
+										<div class="col-6 col-12-xsmall">
+											<input type="text" name="pronouns" id="pronouns" value="" placeholder="Preferred Pronouns"/>
+										</div>
 										<div class="col-12">
 											<select name="careerstage" id="careerstage"  required>
 												<option value="">- Career Stage -</option>
@@ -69,16 +72,13 @@
 												<option value="Graduate">Graduate</option>
 												<option value="Postdoc">Postdoctorate</option>
 												<option value="Faculty">Faculty</option>
+												<option value="Industry">Staff Scientist</option>
 												<option value="Industry">Industry Professional</option>
 												<option value="Other">Other</option>
 											</select>
 										</div>
 										<div class="col-12">
-											Please provide a brief overview of your research or industry focus.
-											<textarea name="expertise-summary" id="expertise-summary" placeholder="Enter your background below." rows="3"  required></textarea>
-										</div>
-										<div class="col-12">
-											Please elaborate on your interest and expertise in Rubin Observatory and/or anomaly detection below. Limit your response to a few sentences.
+											Please describe your interest and expertise in the Vera C. Rubin Observatory and/or anomaly detection below. Limit your response to a few sentences.
 											<textarea name="interest-summary" id="interest-summary" placeholder="Enter your interest below." rows="6"  required></textarea>
 										</div>
 										<div class="col-12">
@@ -98,14 +98,13 @@
 											<textarea name="comments" id="comments" placeholder="Enter your question/comment here." rows="3"></textarea>
 										</div>
 										<div class="col-12">
-											A number of small travel grants will be awarded to allow early-career researchers to attend the hackathon. Please check the box below if you would like to be considered for support.</br>
+											A number of small travel grants are available for hackathon participants. Please check the box below if you would like to be considered for support.</br>
 											<input type="checkbox" id="support" name="support">
 											<label for="support">Yes, I would like to apply for a travel grant.</label>
 										</div>
 										<div class="col-12">
 											<ul class="actions">
 												<li><input type="submit" value="Submit Registration" class="primary" /></li>
-												<li><input type="reset" value="Reset" /></li>
 											</ul>
 										</div>
 									</div>
