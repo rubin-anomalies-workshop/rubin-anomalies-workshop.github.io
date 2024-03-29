@@ -5,234 +5,188 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Time-Domain Needles 2024</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+	<title>Time-Domain Needles 2024</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hackathon Project Details</title>
+<style>
+.accordion-section .accordion {
+  background-color: #eee;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: background-color 0.4s ease;
+	border-radius: 0 !important; /* Make corners sharp */
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+}
 
-				<!-- Header -->
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion-section .accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion-section .active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+	border: 1px solid darkgrey; /* Add border */
+	border-top: none !important;
+	border-bottom: none !important;
+	background-color: #fff5f8; /* Set background color for active panel */
+	font-size: 0.9em;
+}
+
+.active-panel {
+}
+/* New class to remove the bottom border when the accordion is active */
+.accordion.active {
+  border-bottom: none !important;
+	background-color: #fff5f8 !important; /* Set background color for active panel */
+}
+
+.panel:last-of-type {
+  border-bottom: 1px solid darkgrey !important;
+}
+</style>
+
+</head>
+<body class="is-preload">
+
+			<!-- Wrapper -->
+				<div id="wrapper">
+
+					<!-- Header -->
 					<header id="header2" class="alt">
 						<h2>Time-Domain Needles in Rubin's Haystacks</h2>
 						<p>Harvard Center for Astrophysics, Cambridge, MA | April 17-19, 2024<br />
 					</header>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="../index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="program.html">Program</a></li>
-							<li><a href="registration.html">Registration</a></li>
-							<li><a href="hacks.html" class="active">Hack Projects</a></li>
-							<li><a href="practicalinfo.html">Practical Information</a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-						<!-- Second Section -->
-						<section id="speakers" class="main special">
-							<header class="major">
-								<h2>Confirmed Invited Speakers</h2>
-							</header>
-							<ul class="features">
-								<li>
-									<img src="../images/bianco_headshot.jpeg" class="icon solid major style1" style="width: 200px; height:200px;" alt="Federica Bianco">
-									<h3>Federica Bianco</h3>
-									<p>University of Delaware | The Rubin Observatory </p>
-								</li>
-								<li>
-									<img src="../images/schwamb_headshot.jpeg" class="icon solid major style1" style="width: 200px; height:200px;" alt="Meg Schwamb">
-									<h3>Meg Schwamb</h3>
-									<p>Queen's University Belfast</p>
-								</li>
-								<li>
-									<img src="../images/malanchev_headshot.webp" class="icon solid major style1" style="width: 200px; height:200px;" alt="Konstantin Malanchev">
-									<h3>Konstantin Malanchev</h3>
-									<p>Carnegie Mellon | LINCC Frameworks</p>
-								</li>
-								<li>
-									<img src="../images/narayan_headshot.jpg" class="icon solid major style1" style="width: 200px; height:200px;" alt="Gautham Narayan">
-									<h3>Gautham Narayan</h3>
-									<p>University of Illinois at Urbana-Champaign | NCSA </p>
-								</li>
-								<li>
-									<img src="../images/hernitschek_headshot.jpeg" class="icon solid major style1" style="width: 200px; height:200px;" alt="Nina Hernitschek">
-									<h3>Nina Hernitschek</h3>
-									<p>Universidad de Antofagasta</p>
-								</li>
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="../index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="program.html">Program</a></li>
+								<li><a href="registration.html">Registration</a></li>
+								<li><a href="hacks.html" class="active">Hack Projects</a></li>
+								<li><a href="practicalinfo.html">Practical Information</a></li>
 							</ul>
-						</section>
-						<section id="intro" class="main">
-							<div class="spotlight">
-								<div class="content">
-									<header class="major">
-										<h2>Preliminary Schedule</h2>
-										<em>Subject to change! All times are in EST.</em>
-									</header>
-								</div>
-							</div>
+						</nav>
 
-							<h3>Day 1: Wednesday, April 17th </h3>
-							<div class="table-wrapper">
-									<table class="alt">
-									<thead>
-										<tr>
-											<th class="centered-header">Local Time</th>
-											<th class="centered-header">Description</th>
-										</tr>
-									</thead>
-									<tbody>
-											<td  style="background-color: rgba(244, 147, 158, 0.15);">12:00pm - 1:00pm</td>
-											<td  style="background-color: rgba(244, 147, 158, 0.15);">Lunch (provided)</td>
-										</tr>
-										<tr>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">1:00pm - 1:15pm</td>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">Opening Remarks</td>
-										</tr>
-										<tr>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">1:15pm - 2:00pm</td>
-											<td style="background-color: rgba(72, 136, 212, 0.15);"><em>Invited Talk: TBD</em></td>
-										</tr>
-										<tr>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">2:00pm - 2:30pm</td>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">Project Pitches</td>
-										</tr>
-										<tr>
-											<td  style="background-color: rgba(244, 147, 158, 0.15);">2:30pm - 2:45pm</td>
-											<td  style="background-color: rgba(244, 147, 158, 0.15);">Coffee Break</td>
-										</tr>
-										<tr>
-											<td  style="background-color: rgba(173, 163, 204, 0.15);">2:45pm - 5:00pm</td>
-											<td  style="background-color: rgba(173, 163, 204, 0.15);">Open Hack Time</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+					<!-- Main -->
+						<div id="main">
 
-							<h3>Day 2: Thursday, April 18th </h3>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th class="centered-header">Local Time</th>
-											<th class="centered-header">Description</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">9:00am - 9:45am</td>
-											<td style="background-color: rgba(72, 136, 212, 0.15);"><em>Invited Talk: TBD</em></td>
-										</tr>
-										<tr>
-											<td style="background-color: rgba(244, 147, 158, 0.15);">9:45am - 10:00am</td>
-											<td style="background-color: rgba(244, 147, 158, 0.15);">Coffee Break</td>
-										</tr>
-										<tr>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">10:00am - 10:30am</td>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">Hack Summaries</td>
-										</tr>
-										<tr>
-											<td  style="background-color: rgba(173, 163, 204, 0.15);">10:30am - 12:00pm</td>
-											<td  style="background-color: rgba(173, 163, 204, 0.15);">Open Hack Time & Optional Tutorial</td>
-										</tr>
-										<tr>
-											<td style="background-color: rgba(244, 147, 158, 0.15);">12:00pm - 1:00pm</td>
-											<td style="background-color: rgba(244, 147, 158, 0.15);">Lunch (provided)</td>
-										</tr>
-										<tr>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">1:00pm - 1:45pm</td>
-											<td style="background-color: rgba(72, 136, 212, 0.15);"><em>Invited Talk: TBD</em></td>
-										</tr>
-										<tr>
-											<td  style="background-color: rgba(244, 147, 158, 0.15);">1:45pm - 2:00pm</td>
-											<td  style="background-color: rgba(244, 147, 158, 0.15);">Coffee Break</td>
-										</tr>
-										<tr>
-											<td  style="background-color: rgba(173, 163, 204, 0.15);">2:00pm - 4:30pm</td>
-											<td  style="background-color: rgba(173, 163, 204, 0.15);">Open Hack Time & Optional Tutorial</td>
-										</tr>
-										<tr>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">4:30pm - 5:00pm</td>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">End of Day Wrap-Up</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Hackathon Projects</h2>
+											<div class="accordion-section">
+															<button class="accordion" style="color: black !important; border: 1px solid darkgrey;">Meg Schwamb: Identifying Cometary Activity in LSST Data</button>
+															<div class="panel">
+															  <p><b>Brief description of hack:</b> Details to come!</br><b>Assigned participants:</b> Details to come!</br><b>Slack channel for the hack in hackathon workspace:</b> #cometary-activity</p>
+															</div>
 
-							<h3>Day 3: Friday, April 19th </h3>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th class="centered-header">Local Time</th>
-											<th class="centered-header">Description</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">9:00am - 9:45am</td>
-											<td style="background-color: rgba(72, 136, 212, 0.15);"><em>Invited Talk: TBD</em></td>
-										</tr>
-										<tr>
-											<td style="background-color: rgba(244, 147, 158, 0.15);">9:45am - 10:00am</td>
-											<td style="background-color: rgba(244, 147, 158, 0.15);">Coffee Break</td>
-										</tr>
-										<tr>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">10:00am - 10:30pm</td>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">Hack Summaries</td>
-										</tr>
-										<tr>
-											<td  style="background-color: rgba(173, 163, 204, 0.15);">10:30am - 12:00pm</td>
-											<td  style="background-color: rgba(173, 163, 204, 0.15);">Open Hack Time & Optional Tutorial</td>
-										</tr>
-										<tr>
-											<td style="background-color: rgba(244, 147, 158, 0.15);">12:00pm - 1:00pm</td>
-											<td style="background-color: rgba(244, 147, 158, 0.15);">Lunch (provided)</td>
-										</tr>
-										<tr>
-											<td style="background-color: rgba(72, 136, 212, 0.15);" style="background-color: rgba(72, 136, 212, 0.15);">1:00pm - 1:45pm</td>
-											<td style="background-color: rgba(72, 136, 212, 0.15);"><em>Invited Talk: TBD</em></td>
-										</tr>
-										<tr>
-											<td  style="background-color: rgba(244, 147, 158, 0.15);">1:45pm - 2:00pm</td>
-											<td  style="background-color: rgba(244, 147, 158, 0.15);">Coffee Break</td>
-										</tr>
-										<tr>
-											<td  style="background-color: rgba(173, 163, 204, 0.15);">2:00pm - 4:30pm</td>
-											<td  style="background-color: rgba(173, 163, 204, 0.15);">Open Hack Time & Optional Tutorial</td>
-										</tr>
-										<tr>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">4:30pm - 5:00pm</td>
-											<td style="background-color: rgba(72, 136, 212, 0.15);">Wrap-Up and Closing Remarks</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+															<button class="accordion" style="color: black !important; border: 1px solid darkgrey;">Dan Muthukrishna: Transient Classification-Based AD</button>
+															<div class="panel">
+															  <p><b>Brief description of hack:</b> Details to come!</br><b>Assigned participants:</b> Details to come!</br><b>Slack channel for the hack in hackathon workspace:</b> #transient-classification</p>
+															</div>
+
+															<button class="accordion" style="color: black !important; border: 1px solid darkgrey;">Alex Gagliano: Extending Light Curve Similarity Searches to Real-Time</button>
+															<div class="panel">
+															  <p><b>Brief description of hack:</b> Details to come!</br><b>Assigned participants:</b> Details to come!</br><b>Slack channel for the hack in hackathon workspace:</b> #laiss-realtime</p>
+															</div>
+
+															<button class="accordion" style="color: black !important; border: 1px solid darkgrey;">Tomás	Cabrera: Characterizing Variability of AGN from the LSSTC AGN Data Challenge</button>
+															<div class="panel">
+															  <p><b>Brief description of hack:</b> Details to come!</br><b>Assigned participants:</b> Details to come!</br><b>Slack channel for the hack in hackathon workspace:</b> #agn-variability</p>
+															</div>
+
+															<button class="accordion" style="color: black !important; border: 1px solid darkgrey;">Matthew Graham: Anomaly Detection with Topological Data Analysis</button>
+															<div class="panel">
+															  <p><b>Brief description of hack:</b> Details to come!</br><b>Assigned participants:</b> Details to come!</br><b>Slack channel for the hack in hackathon workspace:</b> #topological-data-analysis</p>
+															</div>
 
 
-					</div>
+															<button class="accordion" style="color: black !important; border: 1px solid darkgrey;">Konstantin Malanchev: Creating a minimal working neural autoencoder for ZTF alert data</button>
+															<div class="panel">
+															  <p><b>Brief description of hack:</b> Details to come!</br><b>Assigned participants:</b> Details to come!</br><b>Slack channel for the hack in hackathon workspace:</b> #neural-autoencoder-alerts</p>
+															</div>
 
-				<!-- Footer -->
-				<footer id="footer">
-					<section>
-						<dl class="alt">
-							<dt>Questions?</dt>
-							<dd><a href="mailto:rubin.anomalies@gmail.com">rubin.anomalies@gmail.com</a></dd>
-						</dl>
-					</section>
-					<p class="copyright">&copy; Alex Gagliano. Design: <a href="https://html5up.net">HTML5 UP</a>. Icons created by Pixel perfect - Flaticon. Background image by
-ESA/Euclid/Euclid Consortium/NASA, with image processing by J.-C. Cuillandre (CEA Paris-Saclay) and G. Anselmi.</p>
-				</footer>
+															<button class="accordion" style="color: black !important; border: 1px solid darkgrey;">Xiaolong	Li: Classifying Supernova Remnants through Light Echo Spectroscopy</button>
+															<div class="panel">
+															  <p><b>Brief description of hack:</b> Details to come!</br><b>Assigned participants:</b> Details to come!</br><b>Slack channel for the hack in hackathon workspace:</b> #supernova-remnant-spectroscopy</p>
+															</div>
 
-			</div>
+															<button class="accordion" style="color: black !important; border: 1px solid darkgrey;">Somayeh Khakpash: Recovery of Microlensing Events in PLAsTiCC/ELAsTiCC</button>
+															<div class="panel">
+															  <p><b>Brief description of hack:</b> Details to come!</br><b>Assigned participants:</b> Details to come!</br><b>Slack channel for the hack in hackathon workspace:</b> #microlensing-elasticc</p>
+															</div>
+													</div>
+
+<!-- Repeat the above block for each project -->
+<script>
+var acc = document.querySelectorAll(".accordion");
+acc.forEach(function(accordion, index) {
+  accordion.addEventListener("click", function() {
+    // Toggle the "active" class on the clicked accordion
+    this.classList.toggle("active");
+
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+      panel.classList.remove("active-panel");
+      // If it's not the last accordion, remove the bottom border
+      if (index !== acc.length - 1) {
+        this.style.borderBottom = '';
+      }
+    } else {
+      // Close all other active panels before opening the new one
+      var allPanels = document.querySelectorAll(".panel");
+      allPanels.forEach(function(otherPanel) {
+        otherPanel.style.maxHeight = null;
+        otherPanel.classList.remove("active-panel");
+      });
+
+      var allAccordions = document.querySelectorAll(".accordion");
+      allAccordions.forEach(function(otherAccordion, idx) {
+        otherAccordion.classList.remove("active");
+        // If it's not the last accordion, remove the bottom border
+        otherAccordion.style.borderBottom = '';
+      });
+
+      // Open the clicked panel
+      panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.classList.add("active-panel");
+      this.classList.add("active");
+      // If it's not the last accordion, remove the bottom border
+      if (index !== acc.length - 1) {
+        this.style.borderBottom = 'none';
+      }
+    }
+  });
+});
+</script>
 
 		<!-- Scripts -->
 			<script src="../assets/js/jquery.min.js"></script>
