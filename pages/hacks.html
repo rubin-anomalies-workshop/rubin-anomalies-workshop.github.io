@@ -85,8 +85,9 @@
   div.accordion-section .accordion.active,
   div.accordion-section .panel {
 		white-space: nowrap;
-	  overflow: hidden;
-	  text-overflow: ellipsis;
+	  overflow-x: auto; /* Allows horizontal scrolling */
+	  overflow-y: hidden; /* Prevents vertical scrolling */
+	  text-overflow: clip; /* Optional: You can remove this line if you want */
 	 }
 }
 </style>
