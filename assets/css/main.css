@@ -2496,6 +2496,9 @@ input, select, textarea {
 	}
 
 /* Actions */
+* {
+  box-sizing: border-box;
+}
 
 	ul.actions {
 		display: -moz-flex;
@@ -2506,10 +2509,14 @@ input, select, textarea {
 		list-style: none;
 		margin-left: -1em;
 		padding-left: 0;
+		flex-wrap: wrap;
+		justify-content: center;
+		list-style: none;
 	}
 
 		ul.actions li {
-			padding: 0 0 0 1em;
+			padding: 0 0 0 0em;
+			margin: 0.5em;
 			vertical-align: middle;
 		}
 
@@ -2599,6 +2606,12 @@ input, select, textarea {
 						padding-top: 0;
 					}
 
+					ul.actions li a.button {
+  font-size: 0.8em; /* Adjust font size as needed */
+  max-width: calc(100% / 6); /* Example for six buttons */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
 					ul.actions:not(.fixed) li input[type="submit"],
 					ul.actions:not(.fixed) li input[type="reset"],
 					ul.actions:not(.fixed) li input[type="button"],
@@ -2632,6 +2645,10 @@ input, select, textarea {
 
 			ul.icons li:last-child {
 				padding-right: 0 !important;
+			}
+
+			.subtext {
+			  font-size: 0.8em; /* Or whatever size you prefer, em is relative to the current font size */
 			}
 
 /* Section/Article */
@@ -3449,6 +3466,8 @@ input, select, textarea {
 		#main button,
 		#main .button {
 			background-color: transparent;
+			white-space: normal; /* Allows text to wrap */
+		  text-align: center; /* Keeps it centered */
 			font-size: large;
 			padding: 10px; /* Adjust the padding as needed */
 		  line-height: 1.5; /* This will ensure proper line spacing */
