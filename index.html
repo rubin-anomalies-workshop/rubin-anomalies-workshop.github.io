@@ -27,7 +27,7 @@
 					</header>
 
 				<!-- Main -->
-					<div id="main"  style="background-color: rgba(255, 255, 255, 0.0);">
+					<div id="main"  style="background-color: rgba(255, 255, 255, 0.0); max-width: 1200px;">
 
 						<!-- Circle container -->
 						<div id="circle-container" style='position:relative;'></div>
@@ -37,12 +37,12 @@
 								<div style="margin-bottom: 0; margin-top: 0;" class="spotlight">
 									<div class="content">
 									<ul class="actions" style="justify-content: center;">
-											<li><a href="pages/about.html" style="display: inline-block;" class="button" id="aboutButton" onmouseover="hoverButton('aboutButton', 'About<br><br>Details about the workshop, its motivation, the SOC/LOC members, and more.')" onmouseout="unhoverButton('aboutButton', 'About')">About</a></li>
-									  	<li><a href="pages/registrationClosed.html" style="display: inline-block;" class="button" id="registrationButton" onmouseover="hoverButton('registrationButton', 'Registration<br><br>Register, submit an idea for a hack, and apply for travel support.')" onmouseout="unhoverButton('registrationButton', 'Registration')">Registration</a></li>
-											<li><a href="pages/program.html" style="display: inline-block;" class="button" id="programButton" onmouseover="hoverButton('programButton', 'Program<br><br>The list of invited talks and hacks (will be updated as the workshop approaches).')" onmouseout="unhoverButton('programButton', 'Program')">Program</a></li>
-											<li><a href="pages/hacks.html" style="display: inline-block;" class="button" id="hackButton" onmouseover="hoverButton('hackButton', 'Hack Projects<br><br>Details on the proposed hack projects, including relevant data and code.')" onmouseout="unhoverButton('hackButton', 'Hacks')">Hack Projects</a></li>
-											<li><a href="pages/hacks.html" style="display: inline-block;" class="button" id="hackButton" onmouseover="hoverButton('hackButton', 'Hack Projects<br><br>Details on the proposed hack projects, including relevant data and code.')" onmouseout="unhoverButton('hackButton', 'Hacks')">Hack Projects</a></li>
-											<li><a href="pages/practicalinfo.html" style="display: inline-block;" class="button" id="practicalButton" onmouseover="hoverButton('practicalButton', 'Getting Around<br><br>Accommodation, transportation, and food in Cambridge/Boston.')" onmouseout="unhoverButton('practicalButton', 'Getting Around')">Getting Around</a></li>
+											<li><a href="pages/about.html" style="display: inline-block; width: 170px !important;" class="button" id="aboutButton" onmouseover="hoverButton('aboutButton', 'About<br><br>Details about the workshop and more.')" onmouseout="unhoverButton('aboutButton', 'About')">About</a></li>
+									  	<li><a href="pages/registrationClosed.html" style="display: inline-block; width: 170px !important;" class="button" id="registrationButton" onmouseover="hoverButton('registrationButton', 'Registration<br><br>Register, travel support, and more.')" onmouseout="unhoverButton('registrationButton', 'Registration')">Registration</a></li>
+											<li><a href="pages/program.html" style="display: inline-block; width: 170px !important;" class="button" id="programButton" onmouseover="hoverButton('programButton', 'Program<br><br>The list of invited talks and hacks.')" onmouseout="unhoverButton('programButton', 'Program')">Program</a></li>
+											<li><a href="pages/hacks.html" style="display: inline-block; width: 170px !important;" class="button" id="hackButton" onmouseover="hoverButton('hackButton', 'Hack Projects<br><br>Details on the proposed hacks.')" onmouseout="unhoverButton('hackButton', 'Hack Projects')">Hack Projects</a></li>
+											<li><a href="pages/posters.html" style="display: inline-block; width: 170px !important;" class="button" id="posterButton" onmouseover="hoverButton('posterButton', 'Virtual Posters<br><br>Showcase your work on relevant topics.')" onmouseout="unhoverButton('posterButton', 'Virtual Posters')">Virtual Posters</a></li>
+											<li><a href="pages/practicalinfo.html" style="display: inline-block; width: 170px !important;" class="button" id="practicalButton" onmouseover="hoverButton('practicalButton', 'Getting Around<br><br>Lodging, travel, and food in Cambridge.')" onmouseout="unhoverButton('practicalButton', 'Getting Around')">Getting Around</a></li>
 										</ul>
 									</div>
 								</div>
@@ -54,17 +54,19 @@
 			  var button = document.getElementById(buttonId);
 			  button.innerHTML = newContent;
 			  button.style.backgroundColor = 'rgba(222, 222, 222, 0.25)';
-			  button.style.height = '170px'; /* Height after hover */
-			  button.style.width = '240px'; /* Width after hover */
-			  button.style.whiteSpace = 'normal';
-			  button.style.transition = 'background-color 0.5s ease, height 0.5s ease, width 0.5s ease, white-space 0.5s ease';
+			  button.style.height = '150px'; /* Height after hover */
+			  //button.style.width = ''; /* Width after hover */
+			  //button.style.whiteSpace = 'normal';
+				button.style.boxSizing = 'border-box'; // Ensure padding and border are included in the width
+			  button.style.transition = 'background-color 0.5s ease, height 0.5s ease, white-space 0.5s ease';
 			}
 
 		function unhoverButton(buttonId, originalContent) {
 		  var button = document.getElementById(buttonId);
 		  button.innerHTML = originalContent;
 			button.style.height = ''; // Reset the height
-		  button.style.width = ''; // Reset the width
+		  //button.style.width = ''; // Reset the width
+			button.style.boxSizing = 'border-box'; // Ensure padding and border are included in the width
 			button.style.backgroundColor = '';
 		}
 
